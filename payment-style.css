@@ -1,0 +1,1141 @@
+.clickable-feature {
+    cursor: pointer;
+}
+
+/* Payment Page Specific Styles */
+
+/* Payment Container */
+.payment-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.payment-title-container {
+    background: #2d3642;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    padding: 18px 12px 12px 12px;
+    margin-bottom: 18px;
+    border: 1.5px solid #3a4452;
+    text-align: center;
+}
+
+.payment-title-container .payment-title {
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.payment-title-container .payment-description {
+    color: #e3e3e3;
+    font-size: 1.13rem;
+    margin-bottom: 0;
+}
+
+/* Payment Methods Grid */
+.payment-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.payment-method-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-method-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+}
+
+.payment-method-card.selected {
+    border-color: #007bff;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+}
+
+.payment-icon {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.payment-method-card:hover .payment-icon {
+    transform: scale(1.1);
+}
+
+.payment-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.payment-method-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.payment-method-card p {
+    color: #6c757d;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.payment-features {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.feature-tag {
+    background: #007bff;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin: 2px 0;
+    display: inline-block;
+}
+
+.feature-tag:hover,
+.feature-tag:focus {
+    background: #0056b3;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.feature-tag:active {
+    background: #003d80;
+    transform: scale(0.98);
+}
+
+/* Payment Form Section */
+.payment-form-section {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.payment-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-group input[readonly] {
+    background: #f8f9fa;
+    color: #6c757d;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+/* Required file upload styling */
+.form-group input[type="file"][required] {
+    border: 2px solid #dc3545;
+    background: #fff5f5;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="file"][required]:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+    background: #fff;
+}
+
+.form-group input[type="file"][required]:valid {
+    border-color: #28a745;
+    background: #f8fff9;
+}
+
+/* Required field indicator */
+.form-group label .required-indicator {
+    color: #dc3545;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.form-group small.required-text {
+    color: #dc3545;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.bank-details,
+.otc-details {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+.bank-details p,
+.otc-details p {
+    margin-bottom: 8px;
+    color: #2c3e50;
+    line-height: 1.5;
+}
+
+.bank-details {
+    background: #34495e !important;
+    color: #fff !important;
+}
+
+.bank-details p,
+.bank-details strong {
+    color: #fff !important;
+}
+
+.otc-details {
+    background: #34495e !important;
+    color: #fff !important;
+}
+.otc-details p,
+.otc-details strong {
+    color: #fff !important;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #545b62;
+    transform: translateY(-2px);
+}
+
+/* Payment Status Section */
+.payment-status-section {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.status-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.status-description {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.status-checker {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.status-input-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.status-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    color: #111 !important;
+    background: #f5f5f5 !important;
+}
+
+.status-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.status-check-btn {
+    padding: 12px 25px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.status-check-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.status-results {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+.status-results.success {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    display: block;
+}
+
+.status-results.error {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    display: block;
+}
+
+.status-results.info {
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+    display: block;
+}
+
+/* Payment Instructions */
+.payment-instructions {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.instructions-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.instructions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.instruction-card {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #007bff;
+}
+
+.instruction-card h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.instruction-card ol {
+    color: #6c757d;
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+.instruction-card li {
+    margin-bottom: 8px;
+}
+
+/* Payment Modal */
+.payment-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 1001;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+.modal-title {
+    padding: 30px 30px 20px;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-body {
+    padding: 20px 30px;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.modal-actions {
+    padding: 20px 30px 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    border-top: 1px solid #e9ecef;
+}
+
+.modal-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+.modal-btn-primary {
+    background: #007bff;
+    color: white;
+}
+
+.modal-btn-primary:hover {
+    background: #0056b3;
+}
+
+.modal-btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.modal-btn-secondary:hover {
+    background: #545b62;
+}
+
+/* Status Indicators */
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-processing {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.status-completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-failed {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment-container {
+        padding: 15px 0;
+    }
+    
+    .payment-title {
+        font-size: 2rem;
+    }
+    
+    .payment-methods-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .payment-form-section,
+    .payment-status-section,
+    .payment-instructions {
+        padding: 25px;
+    }
+    
+    .status-input-group {
+        flex-direction: column;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .instructions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-method-card {
+        padding: 20px;
+    }
+    
+    .payment-icon {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .payment-method-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .form-title,
+    .status-title,
+    .instructions-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .payment-method-card {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        border-color: #4a5568;
+        color: #ffffff;
+    }
+    .payment-method-card h3,
+    .payment-method-card p,
+    .payment-title,
+    .payment-description {
+        color: #ffffff;
+    }
+    .payment-method-card.selected {
+        background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+        color: #ffffff;
+    }
+    
+    .payment-form-section,
+    .payment-status-section,
+    .payment-instructions {
+        background: #2c3e50;
+        border-color: #4a5568;
+        color: #ffffff;
+    }
+    
+    .form-group label {
+        color: #ffffff;
+    }
+    
+    .form-group input,
+    .form-group select {
+        background: #fff !important;
+        color: #232b36 !important;
+        border-color: #3a4452 !important;
+    }
+    
+    .bank-details,
+    .otc-details {
+        background: #34495e;
+        color: #ffffff;
+    }
+    
+    .instruction-card {
+        background: #34495e;
+        color: #ffffff;
+    }
+    
+    .modal-content {
+        background: #2c3e50;
+        color: #ffffff;
+    }
+    
+    .status-title,
+    .status-description,
+    .status-checker,
+    .status-input-group label,
+    .status-input,
+    .status-check-btn,
+    .payment-instructions,
+    .instructions-title,
+    .instruction-card,
+    .instruction-card h4,
+    .instruction-card ol,
+    .instruction-card li {
+        color: #fff !important;
+    }
+    .status-results,
+    .status-results.success,
+    .status-results.error,
+    .status-results.info,
+    .status-results div,
+    .status-results *[style*='background'] {
+        background: #232b36 !important;
+        color: #fff !important;
+        border-color: #3a4452 !important;
+    }
+    .status-results p,
+    .status-results strong,
+    .status-results span,
+    .status-results h4 {
+        color: #fff !important;
+    }
+    .status-results input {
+        background: #232b36 !important;
+        color: #fff !important;
+        border-color: #3a4452 !important;
+    }
+    .status-indicator {
+        background: #232b36 !important;
+        color: #fff !important;
+        border: 2px solid #fff !important;
+    }
+    .modal-title {
+        color: #fff !important;
+    }
+}
+
+body.high-contrast .modal-title {
+    color: #fff !important;
+}
+
+/* Light mode explicit text color for contrast */
+@media (prefers-color-scheme: light), not all and (prefers-color-scheme: dark) {
+    .payment-method-card h3,
+    .payment-method-card p,
+    .payment-title,
+    .payment-description,
+    .instructions-title,
+    .instruction-card,
+    .instruction-card h4,
+    .instruction-card ol,
+    .instruction-card li {
+        color: #111 !important;
+    }
+    main .container section.payment-container .payment-title,
+    main .container section.payment-container .payment-description {
+        color: #111 !important;
+    }
+}
+
+/* Force payment title and description to black in light mode (must be last for precedence) */
+@media (prefers-color-scheme: light), not all and (prefers-color-scheme: dark) {
+    main .container section.payment-container .payment-title,
+    main .container section.payment-container .payment-description {
+        color: #111 !important;
+    }
+}
+
+@media (prefers-color-scheme: light), not (prefers-color-scheme: dark) {
+  .payment-method-card h3,
+  .payment-method-card p,
+  .payment-title,
+  .payment-description {
+    color: #111 !important;
+  }
+}
+
+body.light-theme .payment-title-container {
+    background: #fff !important;
+    border-color: #e9ecef !important;
+}
+body.light-theme .payment-title-container .payment-title {
+    color: #222 !important;
+}
+body.light-theme .payment-title-container .payment-description {
+    color: #333 !important;
+}
+
+body.light-theme .payment-method-card h3,
+body.light-theme .payment-method-card p,
+body.light-theme .payment-title,
+body.light-theme .payment-description,
+body.light-theme .instructions-title,
+body.light-theme .instruction-card,
+body.light-theme .instruction-card h4,
+body.light-theme .instruction-card ol,
+body.light-theme .instruction-card li {
+    color: #111 !important;
+}
+main .container section.payment-container .payment-title,
+main .container section.payment-container .payment-description {
+    color: #111 !important;
+}
+
+body.light-theme .payment-method-card,
+body.light-theme .instruction-card {
+    background: #fff !important;
+    border-color: #e9ecef !important;
+}
+
+body.light-theme .payment-instructions {
+    background: #fff !important;
+    border-color: #e9ecef !important;
+}
+
+body.light-theme .payment-status-section {
+    background: #fff !important;
+    border-color: #e9ecef !important;
+}
+
+body.light-theme .status-title,
+body.light-theme .status-description {
+    color: #111 !important;
+}
+
+body.light-theme .payment-form-section {
+    background: #fff !important;
+    border-color: #e9ecef !important;
+}
+body.light-theme .payment-form-section input,
+body.light-theme .payment-form-section select {
+    background: #fff !important;
+    color: #111 !important;
+    border-color: #e9ecef !important;
+}
+body.light-theme .payment-form-section label,
+body.light-theme .payment-form-section .form-title {
+    color: #111 !important;
+}
+
+body.light-theme .bank-details,
+body.light-theme .otc-details {
+    background: #fff !important;
+    color: #111 !important;
+    border-color: #e9ecef !important;
+}
+body.light-theme .bank-details p,
+body.light-theme .otc-details p {
+    color: #111 !important;
+}
+
+body.light-theme .bank-details {
+    background: #fff !important;
+    color: #111 !important;
+    border-color: #e9ecef !important;
+}
+body.light-theme .bank-details p,
+body.light-theme .bank-details strong {
+    color: #111 !important;
+}
+
+body.light-theme .otc-details {
+    background: #fff !important;
+    color: #111 !important;
+    border-color: #e9ecef !important;
+}
+body.light-theme .otc-details p,
+body.light-theme .otc-details strong {
+    color: #111 !important;
+}
+
+body.high-contrast .payment-form-section,
+body.high-contrast .bank-details,
+body.high-contrast .otc-details,
+body.high-contrast .payment-method-card,
+body.high-contrast .instruction-card,
+body.high-contrast .payment-status-section,
+body.high-contrast .payment-instructions {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+body.high-contrast .bank-details p,
+body.high-contrast .otc-details p,
+body.high-contrast .payment-method-card h3,
+body.high-contrast .payment-method-card p,
+body.high-contrast .instruction-card h4,
+body.high-contrast .instruction-card ol,
+body.high-contrast .instruction-card li,
+body.high-contrast .status-title,
+body.high-contrast .status-description,
+body.high-contrast .instructions-title {
+    color: #fff !important;
+}
+body.high-contrast .bank-details,
+body.high-contrast .otc-details {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+body.high-contrast .bank-details p,
+body.high-contrast .otc-details p {
+    color: #fff !important;
+}
+body.high-contrast .bank-details input,
+body.high-contrast .bank-details select,
+body.high-contrast .otc-details input,
+body.high-contrast .otc-details select {
+    background: #000 !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+}
+body.high-contrast .payment-form-section input,
+body.high-contrast .payment-form-section select,
+body.high-contrast .payment-form-section textarea {
+    background: #000 !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+}
+body.high-contrast .payment-form-section label,
+body.high-contrast .payment-form-section .form-title {
+    color: #fff !important;
+}
+body.high-contrast .modal-content {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+body.high-contrast .modal-content p,
+body.high-contrast .modal-content h4,
+body.high-contrast .modal-content strong,
+body.high-contrast .modal-content span,
+body.high-contrast .modal-content label {
+    color: #fff !important;
+}
+body.high-contrast .modal-content div,
+body.high-contrast .modal-content .status-results,
+body.high-contrast .modal-content [style*='background'] {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+body.high-contrast .modal-content p,
+body.high-contrast .modal-content h4,
+body.high-contrast .modal-content strong,
+body.high-contrast .modal-content span,
+body.high-contrast .modal-content label,
+body.high-contrast .modal-content button {
+    color: #fff !important;
+}
+body.high-contrast .status-results,
+body.high-contrast .status-results div,
+body.high-contrast .status-results *[style*='background'] {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+body.high-contrast .status-results p,
+body.high-contrast .status-results strong,
+body.high-contrast .status-results span,
+body.high-contrast .status-results h4 {
+    color: #fff !important;
+}
+body.high-contrast .status-indicator {
+    background: #000 !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+}
+
+body.high-contrast .payment-title-container,
+body.high-contrast .payment-options-container {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+body.high-contrast .payment-title-container .payment-title,
+body.high-contrast .payment-title-container .payment-description,
+body.high-contrast .payment-options-container .payment-title,
+body.high-contrast .payment-options-container .payment-description {
+    color: #fff !important;
+}
+
+.payment-options-container {
+    background: #232b36;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    padding: 18px 12px 18px 12px;
+    margin-bottom: 18px;
+    border: 2px solid #3a4452;
+}
+
+.payment-options-container .payment-title {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.payment-options-container .payment-description {
+    color: #e3e3e3;
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+}
+
+body.high-contrast .status-results {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+body.high-contrast .status-results p,
+body.high-contrast .status-results strong,
+body.high-contrast .status-results span,
+body.high-contrast .status-results h4 {
+    color: #fff !important;
+}
+body.high-contrast .status-indicator {
+    background: #000 !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+}
+
+body.light-theme .status-results,
+body.light-theme .status-results.success,
+body.light-theme .status-results.error,
+body.light-theme .status-results.info,
+body.light-theme .status-results div,
+body.light-theme .status-results *[style*='background'] {
+    background: #f8f9fa !important;
+    color: #222 !important;
+    border-color: #e9ecef !important;
+}
+body.light-theme .status-results p,
+body.light-theme .status-results strong,
+body.light-theme .status-results span,
+body.light-theme .status-results h4 {
+    color: #222 !important;
+}
+body.light-theme .status-indicator {
+    background: #fff !important;
+    color: #222 !important;
+    border: 2px solid #222 !important;
+}
+
+body.light-theme .payment-options-container {
+    background: #fff !important;
+    border: 1.5px solid #e9ecef !important;
+    box-shadow: none !important;
+    margin: 0 auto 40px auto !important;
+}
+
+body.light-theme .modal-content,
+body.light-theme .modal-content div,
+body.light-theme .modal-content *[style*='background'] {
+    background: #fff !important;
+    color: #222 !important;
+    border-color: #e9ecef !important;
+}
+body.light-theme .modal-content p,
+body.light-theme .modal-content strong,
+body.light-theme .modal-content span,
+body.light-theme .modal-content h4 {
+    color: #222 !important;
+}
+
+input.status-input,
+input.status-input:focus {
+    color: #111 !important;
+    background: #fff !important;
+}
+input.status-input::placeholder {
+    color: #888 !important;
+    opacity: 1 !important;
+}
+
+.footer-spacer {
+  height: 60px;
+  min-height: 40px;
+}
+
+.footer {
+  width: 100%;
+  background: none;
+  border-top: 1px solid var(--line-clr);
+  color: var(--secondary-text-clr);
+  text-align: center;
+  padding: 1.5em 0 1em 0;
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.footer a {
+  color: var(--secondary-text-clr);
+  text-decoration: underline;
+  margin: 0 2px;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: var(--accent-clr);
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 0.95rem;
+    padding: 1em 0.5em;
+  }
+}
+
+.modal-confirm-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    color: #2563EB;
+}
+
+body.light-theme .modal-confirm-title {
+    color: #2563EB !important;
+}
+
+body.high-contrast .modal-confirm-title {
+    color: #fff !important;
+} 
